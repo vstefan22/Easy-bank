@@ -1,111 +1,258 @@
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;400&display=swap");
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Public Sans", sans-serif;
 }
 
 /* Navbar */
-.nav-links li, a{
-    font-family: "Public Sans", sans-serif;
-    font-weight: 300;
-    color: hsl(233, 8%, 62%);
-    text-decoration: none;
-}
 
 header {
-   
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 10%;
-    background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+  background: white;
 }
 
-.logo{
-    cursor: pointer;
+.logo {
+  cursor: pointer;
+}
+
+.nav-links li,
+a {
+  font-weight: 400;
+  color: hsl(233, 8%, 62%);
+  text-decoration: none;
 }
 
 .nav-links li {
-    display: inline-block;
-    padding: 0 20px;
+  display: inline-block;
+  padding: 0px 20px;
 }
 
-.nav-links li a{
-    transition: all 0.3s ease 0s;
+.nav-links a {
+  padding-bottom: 19px;
 }
 
-.nav-links li a:hover{
-    color: #0088a9;
+.nav-links li a:hover {
+  color: black;
+  border-bottom: 3px solid hsl(136, 65%, 51%);
 }
 
-.request-button{
-    padding: 12px 30px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    color: white;
-    font-family: "Public Sans", sans-serif;
-    font-size: 16px;
-    width: 180px;
-    background-image: linear-gradient(to left,hsl(192, 70%, 51%), hsl(136, 65%, 51%));;
+.request-button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  width: 180px;
+  background-image: linear-gradient(
+    to left,
+    hsl(192, 70%, 51%),
+    hsl(136, 65%, 51%)
+  );
+}
+.request-button:hover {
+  background-image: linear-gradient(
+    to left,
+    hsl(192, 67%, 65%),
+    hsl(136, 72%, 65%)
+  );
 }
 
 /* Next generation digital banking */
-.next-gen{
-    
-    padding-left: 10%;
-    background-color: hsl(0, 0%, 98%);
-    font-family: "Public Sans", sans-serif;
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 700px; 
+.next-gen {
+  padding-left: 10%;
+  background-color: hsl(0, 0%, 98%);
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 700px;
 }
 
+/*place text in middle */
 .text-content {
-    margin-top: 50%;
-    margin-bottom: 50%;
-    width: 30%;
+  margin-top: 50%;
+  margin-bottom: 50%;
+  width: 50%;
+}
 
+.text-content p {
+  padding-bottom: 40px;
+  color: hsl(233, 8%, 62%);
+  font-size: 18px;
 }
-.text-content p{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: hsl(233, 8%, 62%);
-    font-size: 18px;
+.text-content h1 {
+  font-weight: 300;
+  font-size: 56px;
+  padding-bottom: 40px;
 }
-.text-content h1{
-    font-weight: 300;
-    font-size: 56px;
-}
+/*place images correctly*/
 .img-content {
-    width:80%;  
-    
+  width: 100%;
+  height: 100%;
 }
 
-  .image-1 {
-    position: relative;
-    top: 453px;
-    left: 20%;
-    width: 100%; /* width of container */
-    height: 780px; /* height of container */
-    object-fit: none;
-    object-position: 0% 100%;
-   
-    
-  }
+.image-1 {
+  position: relative;
+  width: 100%;
+  height: 780px;
+  object-fit: none;
+  object-position: 0% 100%;
+}
 
-  .image-2 {
-    position: relative;
-    left: 45%;
-   bottom: 327px;
-    width: 700px; /* width of container */
-    height: 825px; /* height of container */
-    object-fit: none;
-    object-position: 0% 100%;
-    z-index: 3;
-    
-    
-  }
-  
+.image-2 {
+  position: relative;
+  left: 25%;
+  bottom: 112%;
+  height: 825px;
+  object-fit: none;
+  object-position: 0% 100%;
+  z-index: 3;
+}
+
+/*Section 1 */
+.section-1 {
+  background-color: hsl(220, 16%, 96%);
+  padding: 80px 10% 0px 10%;
+}
+.section-1 h1 {
+  padding-bottom: 10px;
+  font-weight: 400;
+  font-size: 32px;
+}
+.item h3 {
+  font-weight: 400;
+  padding-bottom: 30px;
+}
+.section-1 p {
+  color: hsl(233, 8%, 62%);
+  line-height: 25px;
+  font-size: 18px;
+}
+
+.section-list {
+  display: flex;
+  padding-top: 50px;
+}
+
+.item {
+  padding-left: 45px;
+  padding-bottom: 100px;
+}
+
+.item p {
+  font-size: 16px;
+}
+
+.section-list > div:first-of-type {
+  padding-left: 0;
+}
+
+.item img {
+  padding-bottom: 40px;
+}
+
+/*Latest Articles*/
+.latest-articles {
+  background-color: hsl(0, 0%, 98%);
+  padding: 80px 10% 80px 10%;
+}
+.latest-articles h1 {
+  font-size: 32px;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+.article-list {
+  display: flex;
+}
+.article-list > div:first-of-type {
+  margin-left: 0;
+}
+.article {
+  margin-left: 25px;
+  background-color: hsl(0, 0%, 100%);
+  width: 25%;
+  height: 400px;
+}
+.article-text {
+  padding: 20px;
+}
+.article img {
+  width: 100%;
+  height: 50%;
+}
+.article h3 {
+  font-weight: 400;
+  font-size: 18px;
+  padding: 10px 0 10px 0;
+}
+.article h3:hover {
+  color: hsl(136, 65%, 51%);
+  cursor: pointer;
+}
+.article small {
+  color: hsl(233, 8%, 62%);
+}
+.article p {
+  font-size: 14px;
+  color: hsl(233, 8%, 62%);
+}
+
+/*footer*/
+.footer {
+  background-color: hsl(233, 26%, 24%);
+  display: flex;
+  color: white;
+  justify-content: flex-end;
+  padding: 80px 10% 80px 10%;
+}
+
+/*for logo and social media*/
+.footer .company .social-media i {
+  padding-left: 10px;
+}
+.social-media i:hover {
+  color: hsl(136, 65%, 51%);
+  cursor: pointer;
+}
+
+.footer .company .social-media i:nth-child(1) {
+  padding-left: 0px;
+}
+.footer .logo {
+  margin-bottom: 50px;
+}
+.footer .list {
+  margin-left: 100px;
+}
+
+/* for lists*/
+.footer ul {
+  list-style-type: none;
+  color: white;
+}
+.list ul li {
+  padding-top: 20px;
+}
+.list ul li a {
+  color: white;
+}
+.list a:hover {
+  color: hsl(136, 65%, 51%);
+}
+/*for button and copyright*/
+.copyright {
+  margin-left: auto;
+  align-self: flex-end;
+}
+.copyright button {
+  margin-left: 20%;
+}
+.copyright p {
+  color: hsl(233, 8%, 62%);
+}
