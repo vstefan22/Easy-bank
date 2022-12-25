@@ -17,7 +17,12 @@
     <!--Navigation-->
     <header>
         <img src="images/logo.svg" alt="logo" class="logo">
-        <nav>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav">
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -28,6 +33,14 @@
         </nav>
         <button class="request-button">Request Invite</button>
     </header>
+    <script>
+        hamburger = document.querySelector('.hamburger');
+        hamburger.onclick = function () {
+            navbar = document.querySelector('nav');
+            navbar.classList.toggle("active")
+
+        }
+    </script>
     <!--Next generation digital banking-->
     <section class="next-gen">
         <div class="text-content">
@@ -38,8 +51,10 @@
                 budgeting, investing, and much more.</p>
             <button class="request-button">Request Invite</button>
         </div>
+
         <div class="img-content">
             <img src="images/bg-intro-desktop.svg" alt="" class="image-1">
+            <div class="image-mobile"></div>
             <img src="images/image-mockups.png" alt="" class="image-2">
         </div>
     </section>
@@ -135,40 +150,40 @@
     </section>
     <!--Footer-->
     <footer class="footer">
-        <div class="container">
-            <div class="company">
-                <img src="images/logo.svg" alt="logo" class="logo">
-                <div class="social-media">
-                    <i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
-                    <i class="fa fa-youtube-play fa-lg" aria-hidden="true"></i>
-                    <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
-                    <i class="fa fa-pinterest fa-lg" aria-hidden="true"></i>
 
-                    <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="list">
-                <ul>
-                    <li><a href="#"> About Us</a></li>
-                    <li><a href="#">Contact</a> </li>
-                    <li><a href="#">Blog</a> </li>
-                </ul>
+        <div class="company">
+            <img src="images/logo.svg" alt="logo" class="logo">
+            <div class="social-media">
+                <i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
+                <i class="fa fa-youtube-play fa-lg" aria-hidden="true"></i>
+                <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                <i class="fa fa-pinterest fa-lg" aria-hidden="true"></i>
 
-            </div>
-            <div class="list">
-                <ul>
-                    <li><a href="#"> Careers</a></li>
-                    <li><a href="#"> Support</a></li>
-                    <li><a href="#"> Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="copyright">
-                <button class="request-button">Request Invite</button>
-                <br>
-                <br>
-                <p>&copy;Easybank. All Rights Reserved</p>
+                <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
             </div>
         </div>
+        <div class="list">
+            <ul>
+                <li><a href="#"> About Us</a></li>
+                <li><a href="#">Contact</a> </li>
+                <li><a href="#">Blog</a> </li>
+            </ul>
+
+        </div>
+        <div class="list">
+            <ul>
+                <li><a href="#"> Careers</a></li>
+                <li><a href="#"> Support</a></li>
+                <li><a href="#"> Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <button class="request-button">Request Invite</button>
+            <br>
+            <br>
+            <p>&copy;Easybank. All Rights Reserved</p>
+        </div>
+
     </footer>
 </body>
 

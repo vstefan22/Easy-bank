@@ -15,7 +15,9 @@ header {
   padding: 10px 10%;
   background: white;
 }
-
+.hamburger {
+  display: none;
+}
 .logo {
   cursor: pointer;
 }
@@ -63,6 +65,62 @@ a {
   );
 }
 
+@media (max-width: 40em) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+  }
+  .nav-links li,
+  a {
+    color: black;
+    font-size: 21px;
+  }
+  .nav {
+    height: 10px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    width: 90vw;
+    background-color: white;
+
+    overflow: hidden;
+    color: black;
+    z-index: 5;
+  }
+  .nav.active {
+    height: 350px;
+    margin: 20px;
+    border-radius: 10px;
+    transition: 1s;
+    box-shadow: 100px 100px 100px 100px rgba(109, 109, 109, 0.5);
+  }
+  .nav-links li {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0 auto;
+
+    padding: 0;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .nav ul li a {
+    margin-bottom: 12px;
+  }
+  .nav.active li {
+    opacity: 1;
+  }
+  .request-button {
+    display: none;
+  }
+}
 /* Next generation digital banking */
 .next-gen {
   padding-left: 10%;
@@ -90,13 +148,14 @@ a {
   font-weight: 300;
   font-size: 56px;
   padding-bottom: 40px;
+  width: 100%;
 }
 /*place images correctly*/
 .img-content {
   width: 100%;
   height: 100%;
+  text-align: end;
 }
-
 .image-1 {
   position: relative;
   width: 100%;
@@ -107,30 +166,35 @@ a {
 
 .image-2 {
   position: relative;
-  left: 25%;
+
   bottom: 112%;
   height: 825px;
   object-fit: none;
   object-position: 0% 100%;
   z-index: 3;
 }
-@media (max-width: 40em) {
+@media (max-width: 560px) {
   .next-gen {
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: 600px;
-    padding-left: 5%;
+    height: 750px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    padding-bottom: 100px;
   }
   .text-content {
     margin-top: 0%;
     margin-bottom: 0%;
-    width: 50%;
+    width: 100%;
     order: 2;
+    padding: 0 10% 0% 10%;
   }
   .text-content h1 {
     font-weight: 400;
-    font-size: 28px;
+    font-size: 48px;
     padding-bottom: 20px;
   }
   .text-content p {
@@ -142,20 +206,48 @@ a {
   .img-content {
     order: 1;
     width: 100%;
-    height: 0%;
-    margin-bottom: 300px;
   }
-
   .image-1 {
-    height: 300px;
-    object-fit: contain;
+    display: none;
+  }
+  .image-mobile {
+    background-image: url("images/bg-intro-mobile.svg");
+    position: relative;
     width: 100%;
+    height: 550px;
+    top: 200px;
+    background-size: 500px 550px;
+    background-repeat: no-repeat;
   }
   .image-2 {
     left: 0;
-    bottom: 300px;
-    height: 300px;
+    bottom: 390px;
+    height: 500px;
     object-fit: contain;
+  }
+}
+@media (max-width: 960px) {
+  .img-content {
+    width: 70%;
+    height: 70%;
+    text-align: end;
+  }
+  .image-1 {
+    position: relative;
+    width: 70%;
+    height: 780px;
+    object-fit: none;
+    object-position: 0% 100%;
+  }
+
+  .image-2 {
+    position: relative;
+    left: 100px;
+    bottom: 112%;
+    height: 825px;
+    object-fit: none;
+    object-position: 0% 100%;
+    z-index: 3;
   }
 }
 /*Section 1 */
@@ -228,6 +320,7 @@ a {
   font-size: 32px;
   margin-bottom: 50px;
   font-weight: 400;
+  text-align: center;
 }
 .article-list {
   display: flex;
@@ -329,7 +422,6 @@ a {
 .copyright p {
   color: hsl(233, 8%, 62%);
 }
-
 @media (max-width: 40em) {
   .footer {
     display: block;
