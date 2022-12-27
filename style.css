@@ -405,7 +405,8 @@ a {
   margin-bottom: 50px;
 }
 .footer .list {
-  margin-left: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .footer ul {
@@ -426,7 +427,6 @@ a {
   margin-left: auto;
   align-self: flex-end;
   text-align: end;
-  margin-left: 20px;
 }
 .copyright p {
   width: 100%;
