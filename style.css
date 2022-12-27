@@ -337,13 +337,11 @@ a {
 }
 
 .article {
-  background-color: black;
-  color: white;
+  background-color: hsl(0, 0%, 100%);
   width: 25%;
 }
 .article-text {
   padding: 20px;
-  background-color: black;
 }
 
 .article img {
@@ -428,6 +426,7 @@ a {
   margin-left: auto;
   align-self: flex-end;
   text-align: end;
+  margin-left: 20px;
 }
 .copyright p {
   width: 100%;
@@ -445,6 +444,7 @@ a {
   }
   .copyright {
     margin-top: 20px;
+    margin-left: 0;
     text-align: center;
   }
 }
