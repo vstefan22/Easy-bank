@@ -79,7 +79,7 @@ a {
     hsl(136, 65%, 51%)
   );
 }
-.request-button-nav {
+.request-button-nav:hover {
   background-image: linear-gradient(
     to left,
     hsl(192, 67%, 65%),
