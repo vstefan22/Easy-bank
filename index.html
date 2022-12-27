@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Bootstrap-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
     <!--CSS-->
@@ -31,8 +30,9 @@
                 <li><a href="#">Careers</a></li>
             </ul>
         </nav>
-        <button class="request-button">Request Invite</button>
+        <button class="request-button-nav">Request Invite</button>
     </header>
+    <!--Kada se ekran smanji da se nav transformise u ikonicu-->
     <script>
         hamburger = document.querySelector('.hamburger');
         hamburger.onclick = function () {
@@ -51,7 +51,7 @@
                 budgeting, investing, and much more.</p>
             <button class="request-button">Request Invite</button>
         </div>
-
+        <!--Dve slike jedna preko druge-->
         <div class="img-content">
             <img src="images/bg-intro-desktop.svg" alt="" class="image-1">
             <div class="image-mobile"></div>
@@ -61,12 +61,16 @@
 
     <!--Why chose Easybank-->
     <section class="section-1">
-        <h1><span id="content1">Why choose</span><span id="content2">Easybank?</span></h1>
-        <p>We leverage Open Banking to turn your bank account into your financial hub. <br>Control your finances like
+        <!--Headline-->
+        <!--Span koristim da prebacim "Easybank u drugi red kada se ekran smanji"-->
+        <h1><span id="content1">Why choose </span><span id="content2">Easybank?</span></h1>
+        <p>We leverage Open Banking to turn your bank account into your financial hub. Control your finances like
             never before.</p>
         <div class="section-list">
             <div class="item">
+                <!--Icon-->
                 <img src="images/icon-online.svg" alt="">
+                <!--Text-->
                 <h3>Online Banking</h3>
                 <p>Our modern web and mobile applications allow you to keep track of your finances wherever you are
                     in
@@ -99,20 +103,20 @@
 
         <div class="article-list">
             <div class="article">
+                <!--Article image-->
                 <img src="images/image-currency.jpg" alt="">
-                <br>
 
+                <!--Text-->
                 <div class="article-text">
-                    <small>By Claire Robinson</small>
-                    <br>
-                    <h3>Receive money in any currency with no fees </h3>
-                    <p>The world is getting smaller and we’re
-                        becoming more mobile. So why should you be forced to only receive money in a single …</p>
+                    <small>By Wilson Hutton</small>
+                    <h3>Treat yourself without worrying about money</h3>
+                    <p>Our simple budgeting feature allows you
+                        to separate out your spending and set realistic limits each month. That means you …</p>
                 </div>
             </div>
             <div class="article">
                 <img src="images/image-restaurant.jpg" alt="">
-                <br>
+
 
                 <div class="article-text">
                     <small>By Wilson Hutton</small>
@@ -123,7 +127,7 @@
             </div>
             <div class="article">
                 <img src="images/image-plane.jpg" alt="">
-                <br>
+
 
                 <div class="article-text">
                     <small>By Wilson Hutton </small>
@@ -135,7 +139,7 @@
             </div>
             <div class="article">
                 <img src="images/image-confetti.jpg" alt="">
-                <br>
+
 
                 <div class="article-text">
                     <small>By Claire Robinson</small>
@@ -150,7 +154,7 @@
     </section>
     <!--Footer-->
     <footer class="footer">
-
+        <!--Social media and logo-->
         <div class="company">
             <img src="images/logo.svg" alt="logo" class="logo">
             <div class="social-media">

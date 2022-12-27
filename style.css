@@ -31,7 +31,7 @@ a {
 
 .nav-links li {
   display: inline-block;
-  padding: 0px 20px;
+  padding: 0px 13px;
 }
 
 .nav-links a {
@@ -64,8 +64,31 @@ a {
     hsl(136, 72%, 65%)
   );
 }
+/*Koristim za navigaciju samo kako bi uklonio dugme kada se smanji ekran*/
+.request-button-nav {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  width: 180px;
+  background-image: linear-gradient(
+    to left,
+    hsl(192, 70%, 51%),
+    hsl(136, 65%, 51%)
+  );
+}
+.request-button-nav {
+  background-image: linear-gradient(
+    to left,
+    hsl(192, 67%, 65%),
+    hsl(136, 72%, 65%)
+  );
+}
 
-@media (max-width: 40em) {
+/*Max widht je veci zato sto se navigacija previse skupi pri manjem ekranu*/
+@media (max-width: 900px) {
   .hamburger {
     display: block;
     cursor: pointer;
@@ -84,10 +107,10 @@ a {
   .nav {
     height: 10px;
     position: absolute;
-    top: 40px;
+    top: 60px;
     left: 0;
     right: 0;
-    width: 90vw;
+    width: 100vw;
     background-color: white;
 
     overflow: hidden;
@@ -96,9 +119,10 @@ a {
   }
   .nav.active {
     height: 350px;
-    margin: 20px;
+    margin: 20px 0px 0px 4vw;
     border-radius: 10px;
     transition: 1s;
+    width: 90vw;
     box-shadow: 100px 100px 100px 100px rgba(109, 109, 109, 0.5);
   }
   .nav-links li {
@@ -117,9 +141,6 @@ a {
   .nav.active li {
     opacity: 1;
   }
-  .request-button {
-    display: none;
-  }
 }
 /* Next generation digital banking */
 .next-gen {
@@ -132,7 +153,6 @@ a {
   height: 700px;
 }
 
-/*place text in middle */
 .text-content {
   margin-top: 50%;
   margin-bottom: 50%;
@@ -154,31 +174,35 @@ a {
 .img-content {
   width: 100%;
   height: 100%;
+  margin: auto;
   text-align: end;
 }
+/*Pozicioniranje dve slike jednu na drugu i da se prikazu tacni delovi slike*/
 .image-1 {
   position: relative;
-  width: 100%;
+
   height: 780px;
+  max-width: 100%;
   object-fit: none;
   object-position: 0% 100%;
 }
 
 .image-2 {
   position: relative;
-
+  max-width: 100%;
   bottom: 112%;
-  height: 825px;
+  height: 110%;
   object-fit: none;
   object-position: 0% 100%;
   z-index: 3;
 }
-@media (max-width: 560px) {
+@media (max-width: 768px) {
   .next-gen {
     display: flex;
     flex-direction: column;
+
     text-align: center;
-    height: 750px;
+    height: 800px;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -186,8 +210,7 @@ a {
     padding-bottom: 100px;
   }
   .text-content {
-    margin-top: 0%;
-    margin-bottom: 0%;
+    margin: 0px;
     width: 100%;
     order: 2;
     padding: 0 10% 0% 10%;
@@ -199,13 +222,14 @@ a {
   }
   .text-content p {
     width: 100%;
-    padding-bottom: 40px;
+
     color: hsl(233, 8%, 62%);
     line-height: 30px;
   }
   .img-content {
     order: 1;
     width: 100%;
+    text-align: center;
   }
   .image-1 {
     display: none;
@@ -216,44 +240,22 @@ a {
     width: 100%;
     height: 550px;
     top: 200px;
-    background-size: 500px 550px;
+    background-size: 100% 480px;
     background-repeat: no-repeat;
   }
   .image-2 {
-    left: 0;
-    bottom: 390px;
-    height: 500px;
+    align-self: center;
+    max-width: 80vw;
+    max-height: 100vh;
+    bottom: 85vh;
     object-fit: contain;
   }
 }
-@media (max-width: 960px) {
-  .img-content {
-    width: 70%;
-    height: 70%;
-    text-align: end;
-  }
-  .image-1 {
-    position: relative;
-    width: 70%;
-    height: 780px;
-    object-fit: none;
-    object-position: 0% 100%;
-  }
 
-  .image-2 {
-    position: relative;
-    left: 100px;
-    bottom: 112%;
-    height: 825px;
-    object-fit: none;
-    object-position: 0% 100%;
-    z-index: 3;
-  }
-}
 /*Section 1 */
 .section-1 {
   background-color: hsl(220, 16%, 96%);
-  padding: 80px 10% 0px 10%;
+  padding: 10% 10% 0px 10%;
 }
 .section-1 h1 {
   padding-bottom: 10px;
@@ -268,20 +270,23 @@ a {
   color: hsl(233, 8%, 62%);
   line-height: 25px;
   font-size: 18px;
+  width: 60%;
 }
 
 .section-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   padding-top: 50px;
+  gap: 0 10px;
 }
 
 .item {
-  padding-left: 45px;
   padding-bottom: 100px;
 }
 
 .item p {
   font-size: 16px;
+  width: auto;
 }
 
 .section-list > div:first-of-type {
@@ -291,10 +296,14 @@ a {
 .item img {
   padding-bottom: 10%;
 }
-@media (max-width: 40em) {
+@media (max-width: 768px) {
   .section-1 {
     text-align: center;
   }
+  .section-1 p {
+    width: auto;
+  }
+  /*Prebacivanje Easybank na drugi red*/
   #content1::after {
     content: "\a";
     white-space: pre;
@@ -315,31 +324,30 @@ a {
 .latest-articles {
   background-color: hsl(0, 0%, 98%);
   padding: 10% 10%;
+  margin-bottom: 10%;
 }
 .latest-articles h1 {
   font-size: 32px;
   margin-bottom: 50px;
   font-weight: 400;
-  text-align: center;
 }
 .article-list {
   display: flex;
+  gap: 12px;
 }
-.article-list > div:first-of-type {
-  margin-left: 0;
-}
+
 .article {
-  margin-left: 2%;
-  background-color: hsl(0, 0%, 100%);
+  background-color: black;
+  color: white;
   width: 25%;
-  max-height: 400px;
 }
 .article-text {
   padding: 20px;
+  background-color: black;
 }
+
 .article img {
   width: 100%;
-  height: 50%;
 }
 .article h3 {
   font-weight: 400;
@@ -358,7 +366,7 @@ a {
   color: hsl(233, 8%, 62%);
 }
 
-@media (max-width: 40em) {
+@media (max-width: 868px) {
   .article-list {
     display: block;
   }
@@ -366,7 +374,12 @@ a {
     margin: 0;
     margin-top: 10%;
     width: 100%;
-    min-height: 450px;
+    min-height: 150px;
+  }
+  .article-text {
+    padding: 20px;
+
+    height: auto;
   }
 }
 /*footer*/
@@ -378,9 +391,9 @@ a {
   padding: 80px 10% 80px 10%;
 }
 
-/*for logo and social media*/
 .footer .company .social-media i {
-  padding-left: 10px;
+  text-align: center;
+  padding: 10px;
 }
 .social-media i:hover {
   color: hsl(136, 65%, 51%);
@@ -397,7 +410,6 @@ a {
   margin-left: 100px;
 }
 
-/* for lists*/
 .footer ul {
   list-style-type: none;
   color: white;
@@ -411,18 +423,17 @@ a {
 .list a:hover {
   color: hsl(136, 65%, 51%);
 }
-/*for button and copyright*/
+
 .copyright {
   margin-left: auto;
   align-self: flex-end;
-}
-.copyright button {
-  margin-left: 20%;
+  text-align: end;
 }
 .copyright p {
+  width: 100%;
   color: hsl(233, 8%, 62%);
 }
-@media (max-width: 40em) {
+@media (max-width: 768px) {
   .footer {
     display: block;
     text-align: center;
@@ -434,8 +445,6 @@ a {
   }
   .copyright {
     margin-top: 20px;
-  }
-  .copyright button {
-    margin: 0;
+    text-align: center;
   }
 }
